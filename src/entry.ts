@@ -1,1 +1,1 @@
-console.log('entry');
+import './styles/global.css';
