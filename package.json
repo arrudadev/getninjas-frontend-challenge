@@ -4,7 +4,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --ext js,ts --fix"
+    "lint": "eslint --ext js,ts --fix src/",
+    "prepare": "husky install"
   },
   "author": "Alexandre Monteiro <alexandre.monteiro@gmail.com>",
   "license": "MIT",
@@ -26,6 +27,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.6.0",
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
