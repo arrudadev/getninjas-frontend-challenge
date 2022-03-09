@@ -8,7 +8,9 @@
 
 :root {
   --white: #fff;
+  --blue: #195ca9;
   --gray: #575757;
+  --shape: #dbdbdb;
 }
 
 html, body {
