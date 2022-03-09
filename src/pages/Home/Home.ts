@@ -1,4 +1,4 @@
-import { Header } from '../../components';
+import { Banner, Header } from '../../components';
 import homeHTML from './home.html';
 
 import './home.css';
@@ -8,6 +8,10 @@ export class Home {
     this.renderHeader(querySelector);
 
     this.renderMain(querySelector);
+
+    const mainQuerySelector = `.main-container`;
+
+    this.renderBanner(mainQuerySelector);
   }
 
   public renderMain(querySelector: string): void {
@@ -20,5 +24,11 @@ export class Home {
     const header = new Header();
 
     header.render(querySelector);
+  }
+
+  private renderBanner(querySelector: string): void {
+    const banner = new Banner();
+
+    banner.render(querySelector);
   }
 }
