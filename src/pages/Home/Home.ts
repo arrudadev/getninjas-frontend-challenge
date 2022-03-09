@@ -1,4 +1,4 @@
-import { Banner, Header } from '../../components';
+import { Banner, BudgetForm, Header } from '../../components';
 import homeHTML from './home.html';
 
 import './home.css';
@@ -12,6 +12,8 @@ export class Home {
     const mainQuerySelector = `.main-container`;
 
     this.renderBanner(mainQuerySelector);
+
+    this.renderBudgetForm(mainQuerySelector);
   }
 
   public renderMain(querySelector: string): void {
@@ -30,5 +32,11 @@ export class Home {
     const banner = new Banner();
 
     banner.render(querySelector);
+  }
+
+  private renderBudgetForm(querySelector: string): void {
+    const budgetForm = new BudgetForm();
+
+    budgetForm.render(querySelector);
   }
 }
