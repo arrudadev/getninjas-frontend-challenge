@@ -1,4 +1,4 @@
-import { Banner, BudgetForm, Header } from '../../components';
+import { Banner, BudgetForm, Footer, Header } from '../../components';
 import homeHTML from './home.html';
 
 import './home.css';
@@ -10,13 +10,13 @@ export class Home {
     this.renderMain(querySelector);
 
     const mainQuerySelector = `.main-container`;
-
     this.renderBanner(mainQuerySelector);
-
     this.renderBudgetForm(mainQuerySelector);
+
+    this.renderFooter(querySelector);
   }
 
-  public renderMain(querySelector: string): void {
+  private renderMain(querySelector: string): void {
     const element = document.querySelector(querySelector);
 
     element.innerHTML += homeHTML;
@@ -38,5 +38,11 @@ export class Home {
     const budgetForm = new BudgetForm();
 
     budgetForm.render(querySelector);
+  }
+
+  private renderFooter(querySelector: string): void {
+    const footer = new Footer();
+
+    footer.render(querySelector);
   }
 }
