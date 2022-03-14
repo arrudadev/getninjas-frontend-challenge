@@ -13,12 +13,12 @@ window.fetch = jest.fn(() =>
 );
 
 describe('Home page', () => {
-  beforeEach(async () => {
+  beforeEach(() => {
     document.body.innerHTML = '';
 
     const home = new Home();
 
-    await home.render('body');
+    home.render('body');
   });
 
   it('should render the home page', () => {

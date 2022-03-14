@@ -176,8 +176,6 @@ export class BudgetForm {
       if (this.formIsValid()) {
         this.saveAnswers();
 
-        console.log(this.budget);
-
         alert('Orçamento enviado com sucesso!');
       } else {
         alert('Há campos obrigatórios que não foram preenchidos.');

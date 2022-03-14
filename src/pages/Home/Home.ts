@@ -4,7 +4,7 @@ import * as homeHTML from './home.html';
 import './home.css';
 
 export class Home {
-  public async render(querySelector: string): Promise<void> {
+  public render(querySelector: string): void {
     this.renderHeader(querySelector);
 
     this.renderMain(querySelector);
@@ -12,7 +12,7 @@ export class Home {
     const mainQuerySelector = `.main-container`;
     this.renderBanner(mainQuerySelector);
 
-    await this.renderBudgetForm(mainQuerySelector);
+    this.renderBudgetForm(mainQuerySelector);
 
     this.renderFooter(querySelector);
   }
@@ -39,10 +39,10 @@ export class Home {
     banner.render(querySelector);
   }
 
-  private async renderBudgetForm(querySelector: string): Promise<void> {
+  private renderBudgetForm(querySelector: string): void {
     const budgetForm = new BudgetForm();
 
-    await budgetForm.render(querySelector);
+    budgetForm.render(querySelector);
   }
 
   private renderFooter(querySelector: string): void {
