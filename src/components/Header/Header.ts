@@ -1,10 +1,15 @@
 import './header.css';
 
-import headerHTML from './header.html';
+import * as headerHTML from './header.html';
 
 export class Header {
   public render(elementSelector: string): void {
     const element = document.querySelector(elementSelector);
-    element.innerHTML += headerHTML;
+
+    if (headerHTML.default) {
+      element.innerHTML += headerHTML.default;
+    } else {
+      element.innerHTML += headerHTML;
+    }
   }
 }
