@@ -59,5 +59,10 @@ module.exports = {
     'no-use-before-define': 'off',
     'no-shadow': 'off',
     'global-require': 'off',
+    'no-param-reassign': 'off',
+    'guard-for-in': 'off',
+    'import/no-mutable-exports': 'off',
+    'no-alert': 'off',
+    'no-console': 'off',
   },
 };
