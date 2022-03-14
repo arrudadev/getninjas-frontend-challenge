@@ -2,20 +2,20 @@ import './select.css';
 
 type SelectProps = {
   id: string;
-  options: SelectOption[];
+  values: Record<string, string>;
   required: boolean;
   name: string;
 };
 
 export class Select {
   private id: string;
-  private options: SelectOption[];
+  private values: Record<string, string>;
   private required: boolean;
   private name: string;
 
   public constructor(props: SelectProps) {
     this.id = props.id;
-    this.options = props.options;
+    this.values = props.values;
     this.required = props.required;
     this.name = props.name;
   }
@@ -27,17 +27,18 @@ export class Select {
 
     const optionElementDefault = document.createElement('option');
 
+    optionElementDefault.setAttribute('value', '');
     optionElementDefault.innerHTML = 'Selecione uma opção';
     selectElement.appendChild(optionElementDefault);
 
-    this.options.forEach(option => {
+    for (const key in this.values) {
       const optionElement = document.createElement('option');
 
-      optionElement.value = option.value;
-      optionElement.innerHTML = option.label;
+      optionElement.setAttribute('value', key);
+      optionElement.innerHTML = this.values[key];
 
       selectElement.appendChild(optionElement);
-    });
+    }
 
     selectElement.setAttribute('id', this.id);
     selectElement.setAttribute('name', this.name);
