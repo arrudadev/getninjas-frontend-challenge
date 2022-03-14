@@ -1,17 +1,18 @@
 import { Banner, BudgetForm, Footer, Header } from '../../components';
-import homeHTML from './home.html';
+import * as homeHTML from './home.html';
 
 import './home.css';
 
 export class Home {
-  public render(querySelector: string): void {
+  public async render(querySelector: string): Promise<void> {
     this.renderHeader(querySelector);
 
     this.renderMain(querySelector);
 
     const mainQuerySelector = `.main-container`;
     this.renderBanner(mainQuerySelector);
-    this.renderBudgetForm(mainQuerySelector);
+
+    await this.renderBudgetForm(mainQuerySelector);
 
     this.renderFooter(querySelector);
   }
@@ -19,7 +20,11 @@ export class Home {
   private renderMain(querySelector: string): void {
     const element = document.querySelector(querySelector);
 
-    element.innerHTML += homeHTML;
+    if (homeHTML.default) {
+      element.innerHTML += homeHTML.default;
+    } else {
+      element.innerHTML += homeHTML;
+    }
   }
 
   private renderHeader(querySelector: string): void {
@@ -34,10 +39,10 @@ export class Home {
     banner.render(querySelector);
   }
 
-  private renderBudgetForm(querySelector: string): void {
+  private async renderBudgetForm(querySelector: string): Promise<void> {
     const budgetForm = new BudgetForm();
 
-    budgetForm.render(querySelector);
+    await budgetForm.render(querySelector);
   }
 
   private renderFooter(querySelector: string): void {
