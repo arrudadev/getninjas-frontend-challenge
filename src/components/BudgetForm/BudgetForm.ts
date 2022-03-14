@@ -1,6 +1,6 @@
 import { Button } from '../Button/Button';
 import { FormField } from '../FormField/FormField';
-import BudgetFormHTML from './budget-form.html';
+import * as BudgetFormHTML from './budget-form.html';
 
 import './budget-form.css';
 
@@ -51,14 +51,19 @@ export class BudgetForm {
 
   public async render(querySelector: string): Promise<void> {
     const element = document.querySelector(querySelector);
-    element.innerHTML += BudgetFormHTML;
+
+    if (BudgetFormHTML.default) {
+      element.innerHTML += BudgetFormHTML.default;
+    } else {
+      element.innerHTML += BudgetFormHTML;
+    }
 
     await this.fetchBudgetRequestFields();
 
     this.renderForm();
   }
 
-  private async fetchBudgetRequestFields(): Promise<void> {
+  public async fetchBudgetRequestFields(): Promise<void> {
     const response = await fetch('http://localhost:3333/budget');
 
     const budgetRequest: BudgetRequest = await response.json();

@@ -66,5 +66,6 @@ module.exports = {
     'no-console': 'off',
     'no-underscore-dangle': 'off',
     'no-useless-constructor': 'off',
+    'no-global-assign': 'off',
   },
 };
