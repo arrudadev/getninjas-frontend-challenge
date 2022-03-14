@@ -64,5 +64,7 @@ module.exports = {
     'import/no-mutable-exports': 'off',
     'no-alert': 'off',
     'no-console': 'off',
+    'no-underscore-dangle': 'off',
+    'no-useless-constructor': 'off',
   },
 };
