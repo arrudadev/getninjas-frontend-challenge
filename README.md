@@ -1,6 +1,6 @@
 <h1 align="center">
   <div style="display: inline-block;">
-    <img src="https://raw.githubusercontent.com/arrudadev/jamstack-next-graphcms/main/.github/assets/logo.svg" height="100" width="100" alt="GetNinjas" />
+    <img src="https://raw.githubusercontent.com/arrudadev/getninjas-frontend-challenge/main/.github/assets/logo.svg" height="100" width="100" alt="GetNinjas" />
   </div>
   GetNinjas frontend challenge
   <br>
@@ -8,7 +8,7 @@
 
 <h4 align="center">GetNinjas frontend technical test project.</h4>
 
-<img src="https://raw.githubusercontent.com/arrudadev/jamstack-next-graphcms/main/.github/assets/cover.gif" height="500" width="100%" alt="cover" />
+<img src="https://raw.githubusercontent.com/arrudadev/getninjas-frontend-challenge/main/.github/assets/cover.gif" height="500" width="100%" alt="cover" />
 
 <h2 id="table-of-contents"> :pushpin: Table of Contents</h2>
 
