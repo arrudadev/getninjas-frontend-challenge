@@ -1,0 +1,29 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 0 16px;
+}
+
+.form-field .budget-form-field-label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+
+  color: var(--black);
+
+  margin-bottom: 10px;
+}
+
+@media (min-width: 680px) {
+  .form-field {
+    padding: 0;
+  }
+
+  .form-field .budget-form-field-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
