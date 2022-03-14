@@ -1,12 +1,4 @@
-<h1 align="center">
-  <div style="display: inline-block;">
-    <img src="https://raw.githubusercontent.com/arrudadev/getninjas-frontend-challenge/main/.github/assets/logo.svg" height="100" width="100" alt="GetNinjas" />
-  </div>
-  GetNinjas frontend challenge
-  <br>
-</h1>
-
-<h4 align="center">GetNinjas frontend technical test project.</h4>
+<h1 align="center">GetNinjas frontend technical test project.</h1>
 
 <img src="https://raw.githubusercontent.com/arrudadev/getninjas-frontend-challenge/main/.github/assets/cover.gif" height="500" width="100%" alt="cover" />
 
