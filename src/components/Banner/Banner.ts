@@ -7,7 +7,7 @@ export class Banner {
     const element = document.querySelector(querySelector);
 
     if (bannerHTML.default) {
-      element.innerHTML = bannerHTML.default;
+      element.innerHTML += bannerHTML.default;
     } else {
       element.innerHTML += bannerHTML;
     }

@@ -1,10 +1,15 @@
-import footerHTML from './footer.html';
+import * as footerHTML from './footer.html';
 
 import './footer.css';
 
 export class Footer {
   public render(querySelector: string): void {
     const element = document.querySelector(querySelector);
-    element.innerHTML += footerHTML;
+
+    if (footerHTML.default) {
+      element.innerHTML += footerHTML.default;
+    } else {
+      element.innerHTML += footerHTML;
+    }
   }
 }
